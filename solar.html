@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>太阳系</title>
+</head>
+<style>
+    *{
+        margin:0px;
+        padding:0px;
+    }
+    html,body{
+        width:100%;
+        height:100%;
+        background:#0C0F1E;
+    }
+    #sys{
+        width:100%;
+        height:100%;
+        position:relative;
+    }
+    #sys div {
+        position: absolute;
+        left: 50%;
+        top: 50%;
+        border-radius: 50%;
+        z-index: 999;
+    }
+    #sys .sun{
+        width:40px;
+        height:40px;
+        background: radial-gradient( #ffd000 1%, #f9b700 39%, #f9b700 39%, #e06317 100%);
+        box-shadow: 0 0 10px 2px rgba(255, 107, 0, 0.4), 0 0 22px 11px rgba(255, 203, 0, 0.13);
+    }
+    #sys .earth{
+        width:150px;
+        height:150px;
+        border:1px solid #093B4E;
+        margin-top:-55px;
+        margin-left: -55px;
+        border-radius:50%;
+        animation: earth 10s linear infinite;
+    }
+    #sys div:before{
+        position: absolute;
+        top:50%;
+        content:"";
+    }
+    #sys .earth:before{
+        width:6px;
+        height:6px;
+        background:#1C2F8E;
+        border-radius:50%;
+        margin-left: 70.5px;
+        margin-top: -79px;
+    }
+    #sys .earth:after{
+        position: absolute;
+        content: "";
+        height: 18px;
+        width: 18px;
+        left: 50%;
+        top: 0px;
+        margin-left: -9px;
+        margin-top: -9px;
+        border-radius: 100px;
+        -webkit-box-shadow: 0 -10px 0 -8px grey;
+        box-shadow: 0 -10px 0 -8px grey;
+        animation: earth 2.2440352158s linear infinite;
+    }
+    #sys .mars{
+        width:300px;
+        height:300px;
+        border:1px solid #093B4E;
+        margin-top:-130px;
+        margin-left: -130px;
+        animation: mars 20s linear infinite;
+    }
+    #sys .mars:before{
+        width:20px;
+        height:20px;
+        background:url("image/mars.jpg");
+        border-radius:50%;
+        margin-left: -10px;
+        animation: mars_self 15s linear infinite;
+        overflow: hidden;
+    }
+    @keyframes earth {
+        from{ transform:rotate(0)}
+        to{ transform:rotate(360deg)}
+    }
+    @keyframes mars {
+        from{ transform:rotate(0)}
+        to{ transform:rotate(360deg)}
+    }
+    @keyframes mars_self {
+        from{ transform:rotate(0)}
+        to{ transform:rotate(360deg)}
+    }
+</style>
+<body>
+<div id="sys">
+    <div class="sun"></div>
+    <div class="earth"></div>
+    <div class="mars"></div>
+
+</div>
+</body>
+</html>
