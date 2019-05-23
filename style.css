@@ -5,6 +5,9 @@
 	text-decoration: none;
 	list-style: none;
 }
+body{
+	overflow-y: hidden;
+}
 html{
 	height: 100%;
 	background: linear-gradient(45deg,#2ed573,#70a1ff);
