@@ -1,4 +1,3 @@
 getdata({
-	name:"zzz"，
-    age:15
+	name:"zzz"
 })
